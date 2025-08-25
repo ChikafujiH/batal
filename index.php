@@ -22,6 +22,66 @@
             perspective: 1000px;
         }
 
+        body {
+      margin: 0;
+      background: linear-gradient(160deg, #001F3F, #003366, #004080);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 30, 0.3);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .ps2-logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .ps2-logo .logo-img {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    /* Tombol Login */
+    .login-btn {
+      padding: 10px 22px;
+      background: #00bfff;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,191,255,0.6);
+    }
+
+    .login-btn:hover {
+      background: #0099cc;
+      box-shadow: 0 0 18px rgba(0,191,255,0.9);
+    }
+
+    /* Konten biar tidak ketutup header */
+    .content {
+      margin-top: 100px;
+      text-align: center;
+    }
+
         /* Starfield background */
         .starfield {
             position: absolute;
@@ -373,15 +433,77 @@
 
     <!-- PlayStation 2 logo -->
     <div class="ps2-logo">
-        📖 SINXAPRO
-    </div>
+    <img src="images/kotak.png" alt="Logo" class="logo-img"> SINXAPRO
+
+    <style>
+    .ps2-logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+
+    .ps2-logo .logo-img {
+      width: 32px;   /* sesuaikan ukuran */
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    /* Header */
+.header {
+  display: flex;
+  justify-content: flex-end; /* tombol ke kanan */
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(3, 3, 109, 0);
+  backdrop-filter: blur(0px);
+  z-index: 1000;
+}
+
+/* Tombol Login */
+.login-btn {
+  padding: 10px 22px;
+  background: #00bfff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,191,255,0.6);
+  
+}
+
+.login-btn:hover {
+  background: #0099cc;
+  box-shadow: 0 0 18px rgba(0,191,255,0.9);
+}
+
+/* Konten biar tidak ketiban header */
+body {
+  margin: 0;
+}
+main {
+  margin-top: 100px;
+}
+
+  </style>
+</div>
+
+<!-- Header -->
+<div class="header">
+    <button class="login-btn" onclick="window.location.href='login.php'">Login</button>
+</div>
+
 
     <!-- Instructions -->
-    <div class="instructions">
-        Use arrows, click items, or scroll<br>
-        
-    </div>
-
+   
     <!-- Scroll indicator -->
     <div class="scroll-indicator">
         🖱️ Scroll to navigate
@@ -593,8 +715,7 @@
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             updateCarousel();
-            console.log('PlayStation 2 Carousel loaded successfully!');
-            console.log('Navigation: Arrow keys, mouse wheel, click items, or touch gestures');
+            
         });
     </script>
 </body>
